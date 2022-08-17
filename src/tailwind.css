@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer components {
+        .menu{
+            @apply md:block md:w-[100%] md:h-[40px] md:bg-[#2b2b2b] block w-[100%] h-[auto] bg-[#6b6b6b]
+        }
+    .products{
+        @apply w-[100%] p-8 box-border bg-[green]
+    }
+}
+@layer utilities {
+    div.menu>nav{
+        @apply md:w-[100%] md:h-[40px] w-[100%] h-[auto]
+    }
+    div.menu>nav>ul{
+        @apply md:flex md:w-[80%] md:h-[40px]   md:mx-auto md:justify-center md:flex-row  flex flex-col
+    }
+    div.menu>nav>ul>li{
+        @apply md:w-[auto] md:bg-[#3b3b3b] md:ml-[5px] bg-[black]
+    }
+    div.menu>nav>ul>li>a{
+        @apply block w-[100%] px-[20px] text-[white] text-[12px] leading-[40px] hover:bg-[purple] transition-all duration-300 text-center
+    }
+    div.products{
+        height:calc(100vh - 40px);
+    }
+    div.products>div.itemProduct{
+        @apply w-[30%] h-[300px] bg-[#2b2b2b] mx-auto relative overflow-hidden
+    }
+    div.products>div.itemProduct>div{
+        @apply w-[100%] h-[100%] bg-[pink] absolute left-[-100%] transition-all  duration-300 ease-linear
+    }
+    div.products>div.itemProduct:hover>div{
+        @apply left-[0]
+    }
+}
